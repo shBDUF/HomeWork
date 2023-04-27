@@ -36,9 +36,41 @@
 //     Console.WriteLine($"Число {firstNum} не делится на два без остатка");
 // }
 
+// int firstNum;
+// firstNum = Convert.ToInt32(Console.ReadLine());
+// for (int i = 0; i < firstNum; i+=2)
+// {
+//     Console.WriteLine(i);
+// }
+
 int firstNum;
 firstNum = Convert.ToInt32(Console.ReadLine());
-for (int i = 0; i < firstNum; i+=2)
+switch (firstNum)
 {
-    Console.WriteLine(i);
+    case < 100 when firstNum>9:
+        Console.WriteLine($"Вторая цифра числа - {firstNum%10}");
+        break;
+    case < 1000 when firstNum>99:
+        Console.WriteLine($"Вторая цифра числа - {firstNum/10%10}");
+        break;
+    case < 10000 when firstNum>999:
+        Console.WriteLine($"Вторая цифра числа - {firstNum/100%10}");
+        break;
+    case < 100000 when firstNum>9999:
+        Console.WriteLine($"Вторая цифра числа - {firstNum/1000%10}");
+        break;
+    case < 1000000 when firstNum>99999:
+        Console.WriteLine($"Вторая цифра числа - {firstNum/10000%10}");
+        break;
+    case < 10000000 when firstNum>999999:
+        Console.WriteLine($"Вторая цифра числа - {firstNum/100000%10}");
+        break;
+    case < 100000000 when firstNum>9999999:
+        Console.WriteLine($"Вторая цифра числа - {firstNum/1000000%10}");
+        break;
+    default:
+    Console.WriteLine("Число должно быть больше 10");
+    break;
 }
+
+
