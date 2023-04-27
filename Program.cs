@@ -25,13 +25,20 @@
 // }
 // Console.WriteLine($"Максимальное число из трёх это {max}");
 
+// int firstNum;
+// firstNum = Convert.ToInt32(Console.ReadLine());
+// if(firstNum%2==0)
+// {
+//     Console.WriteLine($"Число {firstNum} делится на два без остатка");
+// }
+// else 
+// {
+//     Console.WriteLine($"Число {firstNum} не делится на два без остатка");
+// }
+
 int firstNum;
 firstNum = Convert.ToInt32(Console.ReadLine());
-if(firstNum%2==0)
+for (int i = 0; i < firstNum; i+=2)
 {
-    Console.WriteLine($"Число {firstNum} делится на два без остатка");
-}
-else 
-{
-    Console.WriteLine($"Число {firstNum} не делится на два без остатка");
+    Console.WriteLine(i);
 }
